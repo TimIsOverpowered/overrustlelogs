@@ -12,6 +12,7 @@ require (
 	github.com/cloudflare/golz4 v0.0.0-20150217214814-ef862a3cdc58
 	github.com/datadog/zstd v1.4.4
 	github.com/fatih/color v1.7.0 // indirect
+	github.com/gin-gonic/gin v1.6.3
 	github.com/golang/snappy v0.0.1 // indirect
 	github.com/gorilla/mux v1.7.4
 	github.com/gorilla/websocket v1.4.2
