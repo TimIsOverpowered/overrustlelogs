@@ -13,7 +13,7 @@ import (
 
 // Paths
 const (
-	LogsPath = "/logs"
+	LogsPath = "/mnt/logs/logs"
 )
 
 // Logger logger
@@ -88,5 +88,9 @@ func (l *Logger) writeLine(timestamp time.Time, channel, nick, message string) {
 		log.Printf("error opening log %s", err)
 		return
 	}
-	logs.Write(timestamp, nick, message)
+	if nick == "twitchnotify" {
+		logs.Write(timestamp, nick, message)
+		return
+	}
+	logs.Write(timestamp, "anon", message)
 }
